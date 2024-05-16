@@ -16,9 +16,7 @@ int main() {
 
 	for (int i = 0; i < n; i++) {
 		scanf("%d", &house[i]);
-		if (i == n - 1) {
-			last = house[i];
-		}
+		last = house[i] > last ? house[i] : last;
 	}
 	t = last;
 
@@ -35,11 +33,11 @@ int main() {
 		if (map[time] < time) {
 			map[time] = 0;
 		}
-		
-		
+
+
 
 		if (time == last) {
-			
+
 			break;
 		}
 	}
@@ -53,13 +51,13 @@ int main() {
 		}
 
 		if (t <= 0) {
-			
+
 			break;
-			
+
 		}
-		
+
 	}
 
 	printf("%d", time);
-	
+
 }
